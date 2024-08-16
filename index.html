@@ -196,7 +196,7 @@
             <input type="text" id="province" name="province" required><br>
             <span id="phoneError" style="display:none;color:red;">Teléfono inválido, debe tener al menos 10 dígitos.</span><br>
             <div>
-                <input type="checkbox" id="accept" required> <span>Acepto <a href="#">Las políticas de esta empresa</a></span>
+                <input type="checkbox" id="accept" required> <span>Acepto <a href="politicas.html">Las políticas de esta empresa</a></span>
             </div>
             <button type="submit" class="popup-button">Participar en el Sorteo</button>
         </form>
@@ -318,7 +318,7 @@ document.getElementById('sorteoForm').addEventListener('submit', function(event)
         document.getElementById('phoneError').style.display = 'none';
     }
 
-    const url = `your-server-endpoint?clientEmail=${clientEmail}&leadName=${inputName}&leadPhone=${inputPhone}&leadEmail=${inputEmailClient}&lastProduct=${inputLastProduct}&province=${inputProvince}`;
+    const url = `https://hooks.zapier.com/hooks/catch/19308114/26o7szj/?clientEmail=${clientEmail}&leadName=${inputName}&leadPhone=${inputPhone}&leadEmail=${inputEmailClient}&lastProduct=${inputLastProduct}&province=${inputProvince}`;
 
     fetch(url, {
         method: 'POST',
